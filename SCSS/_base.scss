@@ -1,0 +1,170 @@
+//* Arts by ReliQ - @IAmReliQ
+//* ReliQ Arts 2014
+
+//:: Fonts
+
+@import "global";
+
+
+//: Definition
+@include define("base") 
+{
+	/* __@Base */
+
+	a {
+		@include box-sizing(border-box); 
+		color: $link-color; 
+		outline: none; 
+		text-decoration: none; 
+		@include transition(all .25s);
+
+		&#to-top {
+			border-radius: 50%; 
+			bottom: .3em; 
+			cursor: pointer; 
+			display: none; 
+			font-size: 2em; 
+			position: fixed; 
+			right: .5em; 
+			text-decoration: none; 
+			z-index: 10;
+		}
+
+		&.elegant {
+			background: #fff; 
+			color: #606f70;
+		}
+
+		&:hover {
+			color: $link-color-hover;
+			text-decoration: none;
+		}
+	}
+
+	body, html {
+		font-size: $font-size;
+		height: 100%; 
+		margin: 0; 
+		padding: 0;
+	}
+	
+	body {
+		background: #F9F9F9 url('../img/patt/pixel_weave.png') top center; 
+		color: $font-color; 
+		font-family: $font-family; 
+		overflow: hidden; 
+		text-rendering: $text-rendering; 
+		width: 100%;
+	}
+
+	button {
+		border: none; 
+		margin: 0; 
+		padding: 0;
+
+		// firefox 2px fix
+    	&::-moz-focus-inner {
+    		border:0; 
+    		padding:0;
+    	}
+	}
+
+	div:not(.camera_wrap, .data-src, .no-trans),
+	section:not(.camera_wrap, .data-src, .no-trans) {
+		@include transition(all .5s);
+	}
+	
+	fieldset{
+		min-width: 0;
+	}
+
+	h1, h2, h3, h4 {
+		color: $font-color-headers; 
+		font-family: $font-family-headers;
+	}
+
+	h1 {
+		color: $font-color-headers-h1; 
+		@include font-size($font-size-h1); 
+		font-weight: 400; 
+		margin:0 0 25px; 
+		padding: 10px 0 0; 
+		text-shadow: 0px 1px 0px rgba(255,255,255,.42);
+
+		a {
+			color: inherit;
+		}
+	}
+
+	h2 {
+		border-bottom: 1px dotted #ddd; 
+		color: $font-color-headers-h2; 
+		@include font-size($font-size-h2); 
+		font-weight: 400; 
+		margin: 0; 
+		padding-top: 19px;
+
+		a {
+			color: inherit;
+		}
+
+		&.subtitle {
+			color: #999; 
+			font-weight: $font-weight-fine; 
+			margin: -30px 0 20px;
+		}
+	}
+
+	h3 {
+		color: $font-color-headers-h3; 
+		font-family: $font-family-headers-alt; 
+		@include font-size($font-size-h3); 
+		font-weight: $font-weight-medium; 
+		margin: 0; 
+		padding-top: 15px;
+	}
+
+	h4 {
+		color: $font-color-headers-h4; 
+		font-family: $font-family-headers-alt; 
+		@include font-size($font-size-h4); 
+		font-weight: 200; 
+		letter-spacing: .5px; 
+		margin: 11px 0 0;
+	}
+
+	img {
+		outline: none;
+	}
+
+	input {
+		.error {
+			background: rgba(250,230,100,.4) !important; 
+			border-color: rgba(250,100,100,.7) !important; 
+			color: rgba(255,2,2,1) !important;
+		}
+	}
+
+	mark {
+		background: transparent; 
+		color: rgb(184, 48, 21);
+	}
+
+	strong {
+		font-weight: bold;
+	}
+
+	ol {
+		li {
+			padding: 5px 0;
+		}
+	}
+
+	ul {
+		list-style-type: square;
+		&.error-list {
+			color: #9e3344;
+		}	
+	}
+		
+}
